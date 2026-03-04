@@ -17,5 +17,6 @@ void print_list(Node *head);
 void reverse_list(Node **head);
 void remove_value(Node **head, int value);
 void free_list(Node **head);
+int list_size(Node *head);
 
 #endif

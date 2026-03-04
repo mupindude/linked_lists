@@ -6,7 +6,7 @@ void free_list(Node **head)
 
     if (head == NULL || *head == NULL)
         return;
-    while (head != NULL)
+    while (*head != NULL)
     {
         temp = *head; //stores current head node
         *head = (*head)->next; //move head forward

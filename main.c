@@ -3,12 +3,20 @@
 int main()
 {
     Node *head = NULL; //local variable which points to the first item of the list
-    
-    add_front(&head, 1);
-    add_front(&head, 3);
-    add_back(&head, 5);
+    int i = 0;
 
+    add_front(&head, 1);
+    add_front(&head, 2);
+    add_front(&head, 3);
     print_list(head);
+    
+    i = list_size(head);
+    printf("List size is: %d\n", i);
+  
+    reverse_list(&head);
+    printf("reversed:");
+    print_list(head);
+
     free_list(&head);
     return 0;
 
