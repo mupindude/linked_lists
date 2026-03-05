@@ -8,6 +8,7 @@ int main()
     add_front(&head, 1);
     add_front(&head, 2);
     add_front(&head, 3);
+    add_back(&head, 7);
     print_list(head);
     
     i = list_size(head);
@@ -16,6 +17,12 @@ int main()
     reverse_list(&head);
     printf("reversed:");
     print_list(head);
+
+    remove_value(&head, 7);
+    printf("After removal: ");
+    print_list(head);
+    i = list_size(head);
+    printf("New list size is %d ", i);
 
     free_list(&head);
     return 0;
