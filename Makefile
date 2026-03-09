@@ -3,7 +3,7 @@ NAME = list_test
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
-SRC = main.c add_back.c add_front.c create_node.c free_list.c list_szie.c print_list.c remove_value.c reverse_list.c
+SRC = main.c add_back.c add_front.c create_node.c free_list.c list_szie.c print_list.c remove_value.c reverse_list.c ft_list_remove_if.c
 
 OBJ = $(SRC:.c=.o)
 

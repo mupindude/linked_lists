@@ -6,7 +6,7 @@
 
 typedef struct  Node
 {
-    int data;
+    void *data;
     struct  Node *next;  
 }   Node;
 
@@ -18,5 +18,6 @@ void reverse_list(Node **head);
 void remove_value(Node **head, int value);
 void free_list(Node **head);
 int list_size(Node *head);
+void ft_list_remove_if(Node **begin_list, void *data_ref, int (*cmp)());
 
 #endif
