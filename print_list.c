@@ -4,8 +4,8 @@ void print_list(Node *head)
 {
     while (head != NULL)
     {
-        printf("%d ->", head->data);
+        printf("%s ->", (char *)head->data);
         head = head->next;
     }
-    printf("NULL\n");    
+    printf("NULL\n");
 }

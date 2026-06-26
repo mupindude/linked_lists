@@ -1,6 +1,6 @@
 #include "prac_list.h"
 
-void add_front(Node **head, int data)
+void add_front(Node **head, void *data)
 {
     Node *new_node = create_node(data);
     if (!new_node)

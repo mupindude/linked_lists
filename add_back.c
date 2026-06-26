@@ -1,9 +1,9 @@
 #include "prac_list.h"
 
-void add_back(Node **head, int data)
+void add_back(Node **head, void *data)
 {
     Node *new_node = create_node(data);
-    Node *temp; 
+    Node *temp;
 
     if (!new_node)
         return;

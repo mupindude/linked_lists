@@ -1,6 +1,6 @@
 #include "prac_list.h"
 
-Node *create_node(int data)
+Node *create_node(void *data)
 {
     Node *new_node = malloc(sizeof(Node));
 

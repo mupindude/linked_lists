@@ -1,6 +1,6 @@
 #include "prac_list.h"
 
-void sort_list(Node **head, int (*cmp)(void *, void *))
+void sort_list(Node **head, void (*cmp)(void *, void *))
 {
     Node *i;
     Node *j;

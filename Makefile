@@ -3,22 +3,30 @@ NAME = list_test
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
-SRC = main.c add_back.c add_front.c create_node.c free_list.c list_szie.c print_list.c remove_value.c reverse_list.c ft_list_remove_if.c
+SRC = main.c add_back.c add_front.c create_node.c free_list.c \
+	  list_size.c print_list.c remove_value.c reverse_list.c \
+	  ft_list_remove_if.c
 
-OBJ = $(SRC:.c=.o)
+OBJ_DIR = obj
+OBJ = $(SRC:%.c=$(OBJ_DIR)/%.o)
 
-$all: $(NAME)
+all: $(NAME)
 
-$(NAME) : $(OBJ)
+$(NAME): $(OBJ)
 	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 
-%.o: %.c prac_list.h
+$(OBJ_DIR):
+	mkdir -p $(OBJ_DIR)
+
+$(OBJ_DIR)/%.o: %.c prac_list.h | $(OBJ_DIR)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OBJ)
+	rm -rf $(OBJ_DIR)
 
 fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
+
+.PHONY: all clean fclean re
