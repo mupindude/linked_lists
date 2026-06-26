@@ -19,5 +19,6 @@ void remove_value(Node **head, int value);
 void free_list(Node **head);
 int list_size(Node *head);
 void ft_list_remove_if(Node **begin_list, void *data_ref, int (*cmp)());
+void sort_list(Node **head, int (*cmp)(void *, void *));
 
 #endif
